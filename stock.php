@@ -17,4 +17,5 @@
     {
         echo "No hay stock";
     }
+    echo "EYYY"
 ?>
