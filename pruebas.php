@@ -5,7 +5,13 @@
     error_reporting(E_ALL);
 
     $aAuto = array();
-    $aAuto["color"] = array();
+    $aAuto["color"] = array("negro", "verde");
+    $aAuto["marca"] = "Ford";
+    $aAuto["anio"] = 1908;          #no se escriben ñ por lo que año se cambia por anio
+    $aAuto["precio"] = 800;
+
+    echo $aAuto["color"][0];
+    print_r($aAuto);
 
 
 
