@@ -18,7 +18,31 @@
     //print_r($aAuto);
 
     echo "La Tv es de 42\" y cuesta $50000";  #para escapar las comillas de la variable o del texto, se debe poner \ adelante para indicar que es un caracter ejemplo \" o \$
-    echo "El contenido de la variables \$nombre es $nombre"
+    echo "El contenido de la variables \$nombre es $nombre";
+
+    #condicionales
+
+    /*para el caso de que el == pregunta si es igual pero no tiene en cuenta el tipo de variable
+    pero si pones un if con === tiene en cuenta la cantidad o variable, además del tipo de variable, es decir
+    que si son distintos tipos de variables (string, entero, etc) va a ser falso*/
+    $bVariable = true; //variable boleana
+    if ($bVariable == true)
+    {
+        echo "Hola mundo!";
+    }
+    if ($bVariable != false)
+    {
+        echo "Ey";
+    }
+    $usuario = "admi";
+    if ($usuario == "admin")
+    {
+        echo "Usted es el administrador";
+    }
+    if ($usuario != "admin")
+    {
+        echo "Bienvenido al sitio Web";
+    }
 
 
 
