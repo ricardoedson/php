@@ -4,6 +4,8 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
+    $nombre = "Edson";
+
     $aAuto = array();
     $aAuto["color"] = array("negro", "verde");
     $aAuto["marca"] = "Ford";
@@ -14,6 +16,9 @@
     . " y su precio es de " . $aAuto["precio"];  #esto es para contatenar una impresion echo
     //echo $aAuto["color"][0];
     //print_r($aAuto);
+
+    echo "La Tv es de 42\" y cuesta $50000";  #para escapar las comillas de la variable o del texto, se debe poner \ adelante para indicar que es un caracter ejemplo \" o \$
+    echo "El contenido de la variables \$nombre es $nombre"
 
 
 
