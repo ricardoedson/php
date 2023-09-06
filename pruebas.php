@@ -8,10 +8,12 @@
     $aAuto["color"] = array("negro", "verde");
     $aAuto["marca"] = "Ford";
     $aAuto["anio"] = 1908;          #no se escriben ñ por lo que año se cambia por anio
-    $aAuto["precio"] = 800;
+    $aAuto["precio"] = "USD 800 a USD 1000";
 
-    echo $aAuto["color"][0];
-    print_r($aAuto);
+    echo "el auto " . $aAuto["marca"]. " del año " . $aAuto["anio"] . " es de color " . $aAuto["color"][1]
+    . " y su precio es de " . $aAuto["precio"];  #esto es para contatenar una impresion echo
+    //echo $aAuto["color"][0];
+    //print_r($aAuto);
 
 
 
