@@ -1,5 +1,8 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
     #la fn rand(x,y) genera un numero aleatorio dentro del rango x e y
 
     $valor = rand(1,5);
