@@ -26,6 +26,12 @@ $aProductos[] = array("nombre" => "Aire Acondicionado Split Inverter Frio/calor 
     "stock" => 5,
     "precio" => 45000,
 );
+$aProductos[] = array("nombre" => "pantalla",
+    "marca" => "Surrey",
+    "modelo" => "553AIQ1201E",
+    "stock" => 5,
+    "precio" => 45000,
+);
 
 //print_r($aProductos);
 ?>
@@ -61,9 +67,30 @@ $aProductos[] = array("nombre" => "Aire Acondicionado Split Inverter Frio/calor 
                     </thead>
                 
                     <tbody>
+
                         <?php
-                            $contador = 0;
-                            while ($contador < 3) {
+                            #CON PHP UNICAMENTE
+                            for($contador=0; $contador< count($aProductos); $contador++) {
+                                echo "<tr>";
+                                    echo "<td>" . $aProductos[$contador]["nombre"] . "</td>";
+                                    echo "<td>" . $aProductos[$contador]["marca"] . "</td>";
+                                    echo "<td>" . $aProductos[$contador]["modelo"] . "</td>";
+                                    echo "<td>" .
+                                    $aProductos[$contador]["stock"] >10? "Hay stock" : ($aProductos[$contador]["stock"] >0 && 
+                                    $aProductos[$contador]["stock"] <=10? "Hay Poco Stock" : "No hay stock") .  
+                                    "</td>";
+                                    echo "<td>" . $aProductos[$contador]["precio"] . "</td>";
+                                    echo "<td><button class='btn btn-primary'>Comprar</button></td>";
+                                echo "</tr>";
+
+                            }
+                        ?>
+                        <?php /*                     con html
+                            //$contador = 0;
+                            //while ($contador < 3) {
+                            //for($contador=0; $contador<3; $contador++) {
+                                for($contador=0; $contador< count($aProductos); $contador++) {  
+                                    // count sirve para contar automaticamente la variable o el array
                         ?>
                         <tr>
                             <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
@@ -79,8 +106,8 @@ $aProductos[] = array("nombre" => "Aire Acondicionado Split Inverter Frio/calor 
                         </tr>
                         
                         <?php
-                            $contador++;
-                         }  //para cerrar ciclo while ?> 
+                            //$contador++;
+                                  "}"  //para cerrar ciclo while */?> 
 
                         <!--<tr>
                             <td><?php /*echo $aProductos[1]["nombre"]; ?></td>
