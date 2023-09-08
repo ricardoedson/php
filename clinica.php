@@ -28,6 +28,12 @@ $aPacientes[] = array(
         "edad" => 50,
         "peso" => 80,
             ) ;
+$aPacientes[] = array(
+    "dni" => "23.684.388",
+    "nombreApellido" => "Juan Barragan",
+    "edad" => 33,
+    "peso" => 75,
+        ) ;
 
     //var_dump($aPacientes);
 ?>
