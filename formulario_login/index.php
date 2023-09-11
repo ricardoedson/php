@@ -41,7 +41,7 @@ exit;*/
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12 p-2">
+            <div class="col-12 pb-2 pt-5">
                 <h1>Formulario</h1>
             </div>
         </div>
