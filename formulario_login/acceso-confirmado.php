@@ -31,8 +31,8 @@ error_reporting(E_ALL);
                 Dolorem quis beatae animi recusandae aperiam, laudantium quaerat, nisi quidem quod magni odit, blanditiis atque?</p>
             </div>
             <div class="col-12">
-                <button type="button" class="btn btn-outline-warning"><a href="index.php" class="text-decoration-none">SALIR</a></button>
-
+                <!--<button type="button" class="btn btn-outline-warning"><a href="index.php" class="text-decoration-none text-black" >SALIR</a></button>-->
+                <a href="index.php" class="btn btn-warning float-end" >SALIR</a>
             </div>
         </div>
     </main>

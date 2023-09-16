@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 /*print_r($_GET);
 exit;*/
 
-if ($_POST){
+if ($_POST){  /*postback */
     //echo "Se envio el formulario correctamente.";
-    $usuario = $_POST["txtUsuario"];
-    $clave = $_POST["txtClave"];
+    $usuario = $_REQUEST["txtUsuario"];
+    $clave = $_REQUEST["txtClave"];
 
     if($usuario == "admin" && $clave =="12345678"){
         header("Location: acceso-confirmado.php");
@@ -62,9 +62,10 @@ exit;*/
                     </div>
                 </form>
                 
-                <?php if(isset($msg)){ ?>
+                <?php if(isset($msg)): /*{*/ ?>   <!--otra sintaxis para cerrar el if-->
                 <div class="alert alert-warning" role="alert">
-                    <?php echo $msg;} ?>
+                    <?php echo $msg; /*}*/
+                    endif; ?>
                 </div>
                 
             </div>
