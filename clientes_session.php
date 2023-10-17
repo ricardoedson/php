@@ -13,7 +13,7 @@ if(isset($_SESSION["listadoClientes"])){
     $aClientes = array();
 }
 
-//print_r($_SESSION);
+print_r($_SESSION);
 if($_POST){
     //asignamos variables de los datos del formulario que viene
     $nombre = $_POST["txtNombre"];
