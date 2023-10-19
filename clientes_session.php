@@ -47,6 +47,20 @@ if($_POST){
     
 }
 
+if (isset($_GET["pos"])){
+    //recupero el dato que viene de la query string via get
+    $pos = $_GET["pos"];
+    #print_r($aClientes[$pos]);
+    unset($aClientes[$pos]); //UNSET: para eliminar pero tambien se debe actualizar session
+    //Actualiza el array
+    $_SESSION["listadoClientes"] = $aClientes;
+    //Para redireccionar la query stream (direccion url) p limpiarla
+    header("Location: clientes_session.php");
+}
+/*if (isset($_POST["btnEliminar"])){
+    session_destroy();      //elimina session pero no borra datos del array:
+        $aClientes = array();  //sobreescribe el valor del array a vacio para no dar click eliminar 2 veces
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +71,6 @@ if($_POST){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>Tabla Clientes</title>
 </head>
@@ -106,9 +119,10 @@ if($_POST){
                                 <td><?php echo $cliente["telefono"]; ?></td>
                                 <td><?php echo $cliente["edad"]; ?></td>
                                 <td>
-                                    <form action="" method="POST">
-                                        <button type="submit" name="btnEliminar_<?php echo $pos; ?>" class="btn btn-outline-warning"><i class="bi bi-trash"></i></button>  
-                                    </form>  
+                                    <a href="clientes_session.php?pos=<?php echo $pos; ?>"><i class="bi bi-trash"></i></a>
+                                    <!--<form action="" method="POST">
+                                        <button type="submit" name="btnEliminar_<?php //echo $pos; ?>" class="btn btn-outline-warning"><i class="bi bi-trash"></i></button>  
+                                    </form> -->  
                                 </td>
                             </tr>
                         <?php endforeach; ?>
