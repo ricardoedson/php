@@ -21,7 +21,7 @@ $pg = "categorias";
         <?php include_once "menu.php"; ?>
     </header>
     <main class="container">
-        
+        <div class="row"></div>
 
     </main>
     <footer class="container"></footer>
