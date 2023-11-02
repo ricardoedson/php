@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-blanco {
+    color: #370a6d;
+    background-color: rgba(227, 227, 227, 0.779);
+    /*border-radius: 15px;*/
+    text-decoration: none;
+    border: 0px;
+    padding: 17px;
+}
+
+#inicio{
+    background: rgb(198, 198, 198);
+}
+#menu {
+    background: white;
+
+}
+#noticia-principal {
+    background-color: white;
+    border-radius: 5px;
+    
+}
+#noticia-principal img {
+    height: 383px;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.info img {
+    height: 300px;
+}
+
+.fa-github {
+    font-size: 18px;
+    background-color: rgb(1, 1, 1);
+    color: white;
+    border-radius: 15px;
+    padding: 8px 8px 4px 8px;
+    margin-left: 10px;
+}
